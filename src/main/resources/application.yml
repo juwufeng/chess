@@ -1,7 +1,6 @@
 server:
   port: 80
 
-
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,6 +11,60 @@ spring:
     view:
       suffix: .html
       prefix: /
+  profiles:
+    active: prod
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+  devtools:
+    restart:
+      enabled: true
 
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
+
+intranet:
+  penetrateUrl: http://
+
+yypay:
+  weixin:
+    login:
+      backUrl: ${intranet.penetrateUrl}/weixin/callBack
+      appId:
+      appSecret:
+  title:
+  hospitalName:
+  checkPdfBase:
+  apiBase:
+  apiUrl:
+  sopAction:
+  inspectionSopAction:
+  pwd: 000000
+  dhccAPIURl: /usr/xk/apiTemplate/dhccAPI.xml
+  inspectionAPI: /usr/xk/apiTemplate/inspectionAPI.xml
+  apiclientCert: /usr/xk/apiTemplate/apiclient_cert.p12
+  pdfCache: /usr/xk/pdf
+
+wx:
+  mchId: 1613636825
+  key: 18647373683ABCDEFGHAF06S55241941
+  unifiedorder:
+    notifyUrl: ${intranet.penetrateUrl}/wxPay/unifiedorderNotify
+
+https:
+  connectionTimeout: 15000
+  readTimeout: 15000
+
+logging:
+  level.*: ERROR
+  file:
+    path: /usr/xk/logBox/
+  com:
+    xk:
+      yypay:
+        dao: debug
+
+
+
+
+
