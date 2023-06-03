@@ -29,8 +29,8 @@ intranet:
 yypay:
   weixin:
     login:
-      backUrl: ${intranet.penetrateUrl}/weixin/callBack
-      appId:
+      backUrl: https://springboot-ws6j-50829-9-1318349010.sh.run.tcloudbase.com/weixin/callBack
+      appId: wx9dd11f102b89dc20
       appSecret:
   title:
   hospitalName:
