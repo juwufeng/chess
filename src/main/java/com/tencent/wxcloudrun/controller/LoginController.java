@@ -89,6 +89,7 @@ public class LoginController {
 
         System.out.println(userInfo);
         logger.info("==========================userInfo"+userInfo);
+        //增加返回用户account信息
 
         //openid已经存在，用openid获取用户信息，实现登陆
         return "redirect:/phone/index?openId="+openid;
